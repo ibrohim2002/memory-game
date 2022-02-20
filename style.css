@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #001b74;
+    --secondary: #00c3ff;
+    --dark: #212121;
+    --light: #F3F3F3;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #020E42;
+    font-family: montserrat, sans-serif;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #000029;
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.header-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px 25px;
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #00003a, #002fff);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 77vh;
+}
+
+.card {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back {
+    background-color: var(--light);
+    transform: rotateY(180deg);
+}
+
+img {
+    width: 90%;
+    height: 90%;
+}
+
+footer {
+    height: 10vh;
+    display: flex;
+    background-color: #000029;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+svg {
+    width: 100px;
+    fill: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+svg:hover {
+    fill: #575563;
+}
+
+a {
+    text-decoration: none;
+}
