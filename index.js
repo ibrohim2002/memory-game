@@ -71,7 +71,7 @@ function e(x) {
             cursor.style.pointerEvents = "none"
         }
         if (check_arr[0] != check_arr[2]) {
-            const timeout = setTimeout(check, 1000);
+            const timeout = setTimeout(check, 500);
         } else {
             for (let n = 0; n < length; n++) {
                 const cursor = document.querySelector(`.card-inner${n}`)
